@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vevo - Tibetan Word Learning Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Vevo - Tibetan Word Learning</h1>
+            <div id="level-info">
+                <span id="current-level">Level: Easy 1</span>
+                <span id="score">Score: 0</span>
+            </div>
+        </header>
+
+        <main>
+            <div id="level-selection" class="screen active">
+                <h2>Select Your Level</h2>
+                <div class="level-grid">
+                    <button class="level-btn" data-level="easy1">Easy 1</button>
+                    <button class="level-btn" data-level="easy2">Easy 2</button>
+                    <button class="level-btn" data-level="easy3">Easy 3</button>
+                    <button class="level-btn" data-level="medium1">Medium 1</button>
+                    <button class="level-btn" data-level="medium2">Medium 2</button>
+                    <button class="level-btn" data-level="medium3">Medium 3</button>
+                    <button class="level-btn" data-level="hard1">Hard 1</button>
+                    <button class="level-btn" data-level="hard2">Hard 2</button>
+                    <button class="level-btn" data-level="hard3">Hard 3</button>
+                </div>
+            </div>
+
+            <div id="game-screen" class="screen">
+                <div id="question-container">
+                    <h2 id="question">Select the correct word</h2>
+                    <div id="words-display"></div>
+                </div>
+                
+                <div id="options-container"></div>
+                
+                <div id="feedback" class="feedback hidden"></div>
+                
+                <div class="game-controls">
+                    <button id="check-btn" class="btn btn-primary">Check Answer</button>
+                    <button id="next-btn" class="btn btn-secondary hidden">Next Question</button>
+                    <button id="back-to-levels-btn" class="btn btn-tertiary">Back to Levels</button>
+                </div>
+            </div>
+
+            <div id="results-screen" class="screen">
+                <h2>Level Complete!</h2>
+                <div id="results-content">
+                    <p id="final-score"></p>
+                    <p id="accuracy"></p>
+                </div>
+                <button id="retry-btn" class="btn btn-primary">Retry Level</button>
+                <button id="next-level-btn" class="btn btn-secondary">Next Level</button>
+                <button id="return-levels-btn" class="btn btn-tertiary">Back to Levels</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
